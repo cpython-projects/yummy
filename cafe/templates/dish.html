@@ -1,0 +1,19 @@
+{% extends 'inner.html' %}
+
+{% block inner_content %}
+    <div class="row justify-content-between gy-5">
+        <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+            <h2 data-aos="fade-up">{{ dish.name }}</h2>
+            <p class="ingredients">{{ dish.ingredients }}</p>
+            <p data-aos="fade-up" data-aos-delay="100">{{ dish.desc }}</p>
+            <p class="price">{{ dish.price|floatformat:2 }} &#8372;</p>
+
+            <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+                <a href="{% url 'cafe:home' %}#book-a-table" class="btn-book-a-table">Book a Table</a>
+            </div>
+        </div>
+        <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
+            <img src="{{ dish.photo.url }}" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
+        </div>
+    </div>
+{% endblock %}

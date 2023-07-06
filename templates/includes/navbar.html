@@ -1,0 +1,12 @@
+<nav id="navbar" class="navbar">
+        <ul>
+            {% for item in main_menu_items %}
+                <li><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></li>
+            {% endfor %}
+{#        {% if request.user.is_authenticated %}#}
+{#				<li class="last"> {{user.username}} | <a href="{% url 'logout' %}">Выйти</a></li>#}
+{#				{% else %}#}
+{#				<li class="last"><a href="{% url 'register' %}">Регистрация</a> | <a href="{% url 'login' %}">Войти</a></li>#}
+{#				{% endif %}#}
+        </ul>
+      </nav>
