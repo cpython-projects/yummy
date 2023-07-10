@@ -34,7 +34,7 @@ DB_HOST = os.environ.get('DB_HOST')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['yummy-ddf43e18b8fc.herokuapp.com', ]
 
